@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+
+# a Bash script that loops from 1 to 10 and:
+# use the while loop (for and until are forbidden)
+# use the if, elif and else statements
+
+Count=1
+while [ "$Count" -le 10 ]; do
+	if [ $Count -eq 4 ]; then
+		echo "bad luck"
+	elif [ $Count -eq 8 ]; then
+		echo "good luck"
+	else
+		echo "Best School"
+	fi
+	let Count=Count+1
+done

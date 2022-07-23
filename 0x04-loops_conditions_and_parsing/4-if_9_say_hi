@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+# Bash script that displays Best School 10 times, but for the 9th iteration, displays Best School and then Hi on a new line.
+# use the while loop (for and until are forbidden)
+# use the if statement
+
+Count=0
+while [ "$Count" -lt 10 ]; do
+	echo "Best School"
+	if [ "$Count" -eq 8 ]
+	then
+		echo "Hi"
+	let Count=Count+1
+done
