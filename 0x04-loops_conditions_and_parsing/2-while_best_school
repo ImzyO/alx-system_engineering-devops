@@ -1,11 +1,9 @@
 #!/usr/bin/env bash
-
 # Bash script that displays Best School 10 times.
 # use the while loop (for and until are forbidden)
-
-Count=1
-while [ "$Count" -lt 10 ]
+Count=0
+while ((Count < 10))
 do
 	echo "Best School"
-	let Count=Count+1
+	Count=$((Count+1))
 done
