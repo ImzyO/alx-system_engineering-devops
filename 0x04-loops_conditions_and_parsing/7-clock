@@ -2,7 +2,8 @@
 # Bash script that displays the time for 12 hours and 59 minutes:
 # use the while loop (for and until are forbidden)
 hr=0
-while [ "$hr" -lt 13 ]; do
+while [ "$hr" -lt 13 ]
+do
 	echo "Hour: $hr"
 	minute=1
 	while [ "$minute" -lt 60 ]; do
