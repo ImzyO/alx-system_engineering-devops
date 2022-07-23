@@ -1,8 +1,6 @@
 #!/usr/bin/env bash
-
 # Bash script that displays the time for 12 hours and 59 minutes:
 # use the while loop (for and until are forbidden)
-
 hr=0
 while [ "$hr" -lt 13 ]; do
 	echo "Hour: $hr"
@@ -11,5 +9,5 @@ while [ "$hr" -lt 13 ]; do
 		echo "$minute"
 		let minute=minute+1
 	done
-	let hr=hr+1
+	hr=$((hr + 1))
 done
