@@ -4,5 +4,5 @@
 sudo apt-get update -y
 sudo apt-get install nginx -y
 echo 'Hello World' | sudo tee /var/www/html/index.nginx-debian.html
-cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
 sudo service nginx start
