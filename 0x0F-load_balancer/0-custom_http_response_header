@@ -2,6 +2,9 @@
 # configuration of web-02 to be identical with web-01, ngix header addition
 sudo apt-get update -y
 sudo apt-get install nginx -y
-header="\\\tadd_header X-Served-By $HOSTNAME;\n"
-sudo sed -i "38i $header" /etc/nginx/sites-available/default
+sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+echo 'Hello World' | sudo tee /var/www/html/index.nginx-debian.html
+sed -i '/listen 80 default_server;/a add_header X-Served-By $hostname;' /etc/nginx/sites-available/default
+echo "Ceci n'est pas une page" | sudo tee /var/www/html/custom_404.html
+sed -i '/server_name _;/a error_page 404 /custom_404.html;\nlocation = /custom_404.html {\nroot /var/www/html;\ninternal;\n}' /etc/nginx/sites-available/default
 sudo service nginx restart
