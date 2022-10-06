@@ -1,4 +1,5 @@
-# HaProxy installation and configuartion
+#!/usr/bin/env bash
+# HaProxy installation and configuration
 
 apt-get install --no-install-recommends software-properties-common
 add-apt-repository ppa:vbernat/haproxy-2.6
