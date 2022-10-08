@@ -2,5 +2,5 @@
 # configuration of web-02 to be identical with web-01, ngix header addition
 sudo apt-get update -y
 sudo apt-get install nginx -y
-sudo sed -i 's/http {/&\n\tadd_header X-Served-By $HOSTNAME;/' /etc/nginx/nginx.conf
+sudo sed -i 's/http {/&\n\tadd_header X-Served-By $HOSTNAME;/' /etc/nginx/sites-available/default
 sudo service nginx restart
