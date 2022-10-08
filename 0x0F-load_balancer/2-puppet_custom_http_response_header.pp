@@ -49,7 +49,7 @@ file_line { 'b':
 
 
 
-file { '/var/www/html/index.html':
+file { '/var/www/html/index.nginx-debian.html':
 
   content => 'Hello World!',
 
