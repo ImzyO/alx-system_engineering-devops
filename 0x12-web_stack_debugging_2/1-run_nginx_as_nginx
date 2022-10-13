@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# it’s a good practice not to run your web servers as root (which is the default for most configurations) and instead run the process as the less privileged nginx user instead. 
-
+# it’s a good practice not to run your web servers as root (which is the default for most configurations) and instead run as user 
 pkill -f apache2
 chown nginx:nginx /etc/nginx/nginx.conf
 chmod 700 /etc/nginx/nginx.conf
