@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#!/usr/bin/env bash
 # Bash script that configures an Ubuntu server with the below requirements
 
 sudo cp /etc/hosts ~/hosts.new
