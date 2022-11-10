@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Using your debugging skills, find out what’s keeping your Ubuntucontainer’s Nginx installation from listening on port 80.
+# Nginx must be running, and listening on port 80 of all the server, active IPv4 IPs
 sudo apt-get -y update
 sudo apt-get -y install nginx
 sudo ufw allow 'Nginx HTTP'
