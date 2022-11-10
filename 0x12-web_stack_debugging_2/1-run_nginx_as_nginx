@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# it’s a good practice not to run your web servers as root (which is the default for most configurations) and instead run as user 
+# nginx must be running as nginx user, not root or else hacked
 pkill -f apache2
 chown nginx:nginx /etc/nginx/nginx.conf
 chmod 700 /etc/nginx/nginx.conf
 sed -i 's/80/8080/g' /etc/nginx/sites-available/default
-sudo nginx service nginx restart
+sudo -u nginx service nginx restart
